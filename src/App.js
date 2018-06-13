@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import CardList from './CardList';
 import SearchBox from './SearchBox';
-import { robots } from './robots';
 import './App.css';
 
 class App extends Component  {
@@ -18,7 +17,7 @@ class App extends Component  {
 			return response.json();
 		})
 		.then(users => {
-			this.setState({robots: robots});
+			this.setState({robots: users});
 		});
 	}
 
